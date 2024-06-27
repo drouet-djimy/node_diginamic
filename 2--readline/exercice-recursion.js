@@ -7,7 +7,8 @@ const rl = readline.createInterface({
 
 function askLine() {
   rl.question("Ecrivez la ligne que vous souhaitez afficher : ", (line) => {
-    if (line === "exit") {
+    if (line.toLowerCase() === "exit") {
+      console.log("Au revoir !");
       rl.close();
     } else {
       console.log(line);
